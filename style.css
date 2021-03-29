@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #8e2de2, #4a00e0) no-repeat;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.card-glass {
+  position: relative;
+  text-align: left;
+  width: 250px;
+  height: 380px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 16px 50px 16px 16px;
+  /* background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);*/
+}
+
+.card-glass .shoes-green {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: -40%;
+  right: -40%;
+}
+
+.card-glass .shoes-red {
+  display: none;
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: -40%;
+  right: -40%;
+}
+
+.card-glass .shoes-blue {
+  display: none;
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: -40%;
+  right: -40%;
+}
+
+.detalhes {
+  position: relative;
+  top: 18%;
+}
+
+.detalhes h3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #8f8f8f;
+}
+
+.detalhes h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #29455f;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.detalhes p {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #29455f;
+  margin-bottom: 1rem;
+}
+
+.detalhes p > span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #808080;
+}
+
+.shoes-details {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.shoes-options {
+  flex: 1 0 auto;
+}
+
+.shoes-options span {
+  text-transform: capitalize;
+  color: #808080;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.colors .colors-options {
+  width: 18px;
+  height: 18px;
+  background-color: #b5db48;
+  border-radius: 50%;
+  margin-right: 15px;
+  z-index: 4;
+  cursor: pointer;
+}
+
+/*.colors-options::before {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border-radius: 50%;
+  background-color: violet;
+}*/
+
+.colors-options.red {
+  background-color: #ff3838;
+}
+
+.colors-options.azul {
+  background-color: #147bfb;
+}
+
+.tamanhos {
+  display: flex;
+}
+
+.tamanhos .tamanhos-options {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  margin-right: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.7rem;
+  color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.4rem;
+}
+
+.tamanhos .tamanho-ativo {
+  background-color: #b5db48;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-carrinho {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  width: 40px;
+  height: 80px;
+  background-color: #b5db48;
+  border-radius: 16px;
+  border-color: #b5db48;
+  box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+  transition: all 0.3s ease;
+}
+
+.btn-carrinho .icon-seta {
+  justify-content: space-between;
+  margin-bottom: -5px;
+}
+
+.btn-carrinho .icon-seta:nth-child(3) {
+  margin-top: -10px;
+}
+
+.btn-carrinho .icon-seta:nth-child(1) {
+  margin-bottom: -9px;
+}
+
+/*MUDANÇA DE CORES E TÊNIS*/
+
+.colors-chance-verde .btn-carrinho {
+  background-color: #b5db48;
+}
+
+.colors-chance-red .btn-carrinho {
+  background-color: #ff3838;
+}
+
+.colors-chance-red .tamanho-ativo {
+  background-color: #ff3838;
+}
+
+.colors-chance-red .shoes-green {
+  display: none;
+}
+
+.colors-chance-red .shoes-red {
+  display: block;
+}
+
+.colors-chance-azul .btn-carrinho {
+  background-color: #147bfb;
+}
+
+.colors-chance-azul .tamanho-ativo {
+  background-color: #147bfb;
+}
+
+.colors-chance-azul .shoes-green {
+  display: none;
+}
+
+.colors-chance-azul .shoes-blue {
+  display: block;
+}
